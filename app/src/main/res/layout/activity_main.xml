@@ -19,18 +19,31 @@
             android:layout_height="250dp"
             android:id="@+id/vid_view"/>
 
-        <Button
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="play video"
-            android:id="@+id/play_btn"/>
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="play video"
+                android:onClick="playVideo"
+                android:id="@+id/play_btn"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="stop video"
+                android:onClick="stopVideo"
+                android:id="@+id/stop_btn"/>
+        </LinearLayout>
+
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="record video"
+            android:onClick="recVideo"
             android:id="@+id/rec_btn"/>
-        
+
     </LinearLayout>
 
 </LinearLayout>
