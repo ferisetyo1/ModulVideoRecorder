@@ -29,13 +29,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void playVideo(View view) {
-        vidview.setVideoURI(VideoUri);
         vidview.start();
     }
 
     public void stopVideo(View view) {
-        vidview.setVideoURI(VideoUri);
         vidview.stopPlayback();
+        vidview.resume();
     }
 
     public void recVideo(View view) {
@@ -50,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         if (requestCode == VIDEO_REQ && resultCode == RESULT_OK) {
             VideoUri = data.getData();
+            vidview.setVideoURI(VideoUri);
         }
     }
 
